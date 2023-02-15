@@ -29,7 +29,7 @@
                     <option value="">Select Started, Pending or Complited</option>
                     <option value="Start">Start</option>
                     <option value="Started">Started</option>
-                    <option value="Pending<">Pending</option>
+                    <option value="Pending">Pending</option>
                     <option value="Complited">Complited</option>
                  </select>
             </div>
