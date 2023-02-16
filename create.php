@@ -9,12 +9,19 @@
 </head>
 <body>
     <div class="container">
+    <div class="row">
+            <div class="col-md-10">
+                <div class="card">
+                <div class="card-header">
+
         <header class="d-flex justify-content-between my-4">
             <h1>Add new Task</h1>
             <div>
                 <a href="index.php" class="btn btn-primary">Back</a>
             </div>
         </header>
+        </div>
+        <div class="card-body">
         <form action="process.php" method="post">
             <div class="form-element my-4">
                 <input type="text" class="form-control" name="task" placeholder="Enter Task" >
@@ -43,6 +50,12 @@
 
         </form>
     </div>
+
+    </div>
+
+</div>
+</div>
+</div>
 </body>
 </html>
 <!-- \php crud\create.php -->

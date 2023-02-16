@@ -10,13 +10,65 @@
 </head>
 <body>
 <div class="container">
+
+<div class="row">
+            <div class="col-md-10">
+                <div class="card">
+                <div class="card-header">
         <header class="d-flex justify-content-between my-4">
             <h1>Task List</h1>
             <div>
                 <a href="create.php" class="btn btn-primary">Add new Task</a>
             </div>
         </header>
-<table class="table table-bordered">
+        </div>
+    <!-- create -->
+<?php 
+session_start();
+if(isset($_SESSION['create'])){
+    ?>
+    <div class="alert alert-success">
+        <?php 
+        echo $_SESSION['create']; 
+        unset($_SESSION['create']);
+        ?>
+    </div>
+    <?php
+   
+}
+?>
+
+<!--  Uppdate -->
+<?php 
+
+if(isset($_SESSION['edit'])){
+    ?>
+    <div class="alert alert-success">
+        <?php echo $_SESSION['edit']; 
+        unset($_SESSION['edit']);
+        ?>
+    </div>
+    <?php
+    
+}
+?>
+
+<!-- Delete -->
+<?php 
+
+if(isset($_SESSION['delete'])){
+    ?>
+    <div class="alert alert-success ">
+        <?php echo $_SESSION['delete']; 
+        unset($_SESSION['delete']);
+        ?>
+    </div>
+    <?php
+    
+}
+?>
+<div class="card-body">
+<table class="table table-bordered table-hover">
     <thead>
         <tr>
             <th>#</th>
@@ -41,7 +93,7 @@
                     <td><?php echo $row['name']; ?></td>
                     <td><?php echo $row['type']; ?></td>
                     <!-- <td><?php echo $row['description']; ?></td> -->
-                    <td>
+                    <td class="d-flex justify-content-center ">
                       <a href="view.php?id=<?php echo $row['id']; ?>" class="btn btn-info">Read More</a>
                         <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">Edit</a>
                         <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
@@ -56,7 +108,11 @@
     </tbody>
 
 </table>
+</div>
+</div>
 
+</div>
+</div>
 </div>
     
 </body>

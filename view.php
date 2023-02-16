@@ -15,14 +15,21 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
+    <div class="row">
+    <div class="col-md-10">
+                <div class="card">
+                <div class="card-header">
             <header class="d-flex justify-content-between my-4">
                 <h1>Task Description</h1>
                 <div>
                     <a href="index.php" class="btn btn-primary">Back</a>
                 </div>
             </header>
+            </div>
+            <div class="card-body">
             <div class="task-details my-4">
                 <?php
                     if(isset($_GET['id'])){
@@ -52,8 +59,14 @@
 
 
             </div>
+            </div>
     </div>
+    </div>
+   
 
+</div>
+</div>
+</div>
     
 </body>
 </html>
